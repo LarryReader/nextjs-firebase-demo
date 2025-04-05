@@ -1,6 +1,8 @@
+'use client';
+
 import Image from "next/image";
 import { signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "../../firebase";
+import { auth, googleProvider } from "../firebase";
 
 export default function Home() {
   const handleGoogleSignIn = () => {
