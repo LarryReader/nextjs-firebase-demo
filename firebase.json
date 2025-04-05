@@ -1,1 +1,13 @@
-{}
+{
+  "hosting": {
+    "public": "my-app/public",
+    "ignore": [ "firebase.json", "**/.*", "**/node_modules/**" ],
+    "rewrites": [ { "source": "**", "destination": "/my-app/public/index.html" } ],
+    "headers": [ { "source": "**/*.@(js|css|svg)", "headers": [ { "key": "Cache-Control", "value": "max-age=3600" } ] } ]
+  },
+  "emulators": {
+    "hosting": { "port": 5000 },
+    "functions": { "port": 5001 },
+    "auth": { "port": 9099 }
+  }
+}
